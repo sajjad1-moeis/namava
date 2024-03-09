@@ -1,0 +1,141 @@
+@font-face {
+   font-family: iranSans;
+   src: url(../fonts/woff/DanaFaNum-Medium.woff);
+}
+* {
+   scroll-behavior: smooth;
+   font-family: iranSans !important;
+}
+
+.activeHeader {
+   color: #6eb8ff;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+   padding: 0 !important;
+}
+
+/* Header */
+header {
+   background-image: linear-gradient(to bottom, rgba(18, 18, 18, 1), rgba(18, 18, 18, 0));
+   transition: 0.3s;
+}
+.hideHeader {
+   top: -120px;
+}
+.showHeader {
+   top: 0px;
+}
+
+/* /////////////////// First Slide */
+
+.swiper {
+   padding: inherit !important;
+   width: 100%;
+   height: max-content !important;
+}
+.swiper-slide {
+   cursor: pointer;
+   height: max-content !important;
+   color: rgb(255, 255, 255);
+   position: relative;
+   text-align: center;
+   font-weight: 400;
+   line-height: 1.75;
+   background-size: cover;
+   background-repeat: no-repeat;
+   transition: 0.8s;
+}
+
+.activeSlide img {
+   filter: brightness(0.3);
+
+   margin-top: 20px;
+}
+
+.activeSlide .moreTozih {
+   opacity: 1;
+}
+.swiper-slide img {
+   display: block;
+   object-fit: cover;
+}
+.divMoreNamava {
+   /* background-color: ; */
+   background-image: linear-gradient(rgba(18, 18, 18, 0), rgb(18, 18, 18));
+}
+.moreCarousel2 {
+   background-image: linear-gradient(to right, rgba(18, 18, 18, 0), rgb(18, 18, 18));
+}
+video {
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   width: 100%;
+   height: auto;
+   z-index: 0;
+   position: absolute;
+   min-height: 100%;
+   object-fit: cover;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   font-size: 20px !important;
+}
+.mySwiper .swiper-button-prev {
+   transform: translate(-10px);
+}
+.mySwiper .swiper-button-next {
+   transform: translate(10px);
+}
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+   padding: 30px !important;
+   border-radius: 60%;
+   background: #414141;
+   position: absolute !important;
+   top: 75% !important;
+}
+
+.swiper-button-disabled {
+   opacity: 0 !important;
+}
+
+/* alertFirstSlide */
+.alertFirstSlide {
+   background: linear-gradient(rgb(255, 213, 76) 0%, rgb(222, 171, 0) 100%);
+}
+.mySwiper2 {
+   margin-top: -40px;
+}
+
+@media (min-width: 776px) {
+   .mySwiper2 {
+      margin-top: -5%;
+   }
+}
+.mySwiper2 img {
+   border-radius: 12px;
+}
+
+.swiper-pagination {
+   position: absolute;
+   bottom: 10% !important;
+}
+
+.mySwiper3 img,
+.moreTozih {
+   transition: 0.3s;
+}
+.mySwiper3 .swiper-slide:hover img {
+   filter: brightness(0.3);
+}
+.moreTozih {
+   opacity: 0;
+}
+.mySwiper3 .swiper-slide:hover .moreTozih {
+   opacity: 1;
+}
+.css-hjtp1-MuiInputBase-root-MuiOutlinedInput-root {
+   color: white !important;
+}
