@@ -28,7 +28,7 @@ export default function Section1() {
    };
 
    return (
-      <div className='min-h-[65vh] md:min-h-screen '>
+      <div className='min-h-[70vh] md:min-h-screen '>
          {loding ? (
             <Loder />
          ) : (
@@ -44,7 +44,7 @@ export default function Section1() {
                {data.slice(0, 8)?.map((item) => (
                   <SwiperSlide key={item.imgLab} className='max-h-screen  h-full'>
                      <div
-                        className='relative min-h-[65vh] md:min-h-screen h-full w-full bg-cover p-20'
+                        className='relative min-h-[70vh] md:min-h-screen h-full w-full bg-cover p-20'
                         style={{
                            backgroundPosition: "center center",
                            backgroundImage: `linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 135vw), url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
