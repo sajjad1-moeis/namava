@@ -42,16 +42,12 @@ export default function Section1() {
                   </button>
                </div>
                {data.slice(0, 8)?.map((item) => (
-                  <SwiperSlide key={item.id} className='max-h-screen  h-full'>
+                  <SwiperSlide key={item.id}>
                      {console.log(item)}
-                     <div className='relative max-h-screen'>
+                     <div className='relative'>
                         <div className='s'></div>
-                        <img
-                           className='md:hidden h-full max-h-[65vh]  w-full object-cover'
-                           src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-                           alt=''
-                        />
-                        <img className='md:block hidden ' src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt='' />
+                        <img className='md:hidden size-full max-h-[70vh]' src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt='' />
+                        <img className='md:block hidden size-full min-h-[65vh]' src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt='' />
                         <div className='absolute w-full h-full md:block  right-0 hidden bg-black opacity-30 top-0'></div>
                         <div className='absolute top-1/2'>{/* <p className='text-3xl'>{item.title}</p> */}</div>
                      </div>
