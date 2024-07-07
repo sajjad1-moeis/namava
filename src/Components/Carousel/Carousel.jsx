@@ -30,7 +30,7 @@ export default function Carousel(props) {
                "--swiper-navigation-color": "#fff",
                "--swiper-pagination-color": "#fff",
                "--swiper-pagination-bullet-inactive-color": "#ffda",
-               "--swiper-pagination-bottom": "150px",
+               "--swiper-pagination-bottom": "100px",
                color: "white",
             }}
             pagination={{

@@ -16,15 +16,18 @@ function useFetch() {
       };
 
       try {
+         setLoding(true);
          const res = await fetch(url, options);
          const videos = await res.json();
          setData(videos.results);
       } catch {
          setError(true);
+      } finally {
+         setLoding(false);
       }
    };
 
-   return {data, fetchData};
+   return {data, fetchData, loding};
 }
 
 export default useFetch;
