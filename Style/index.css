@@ -18,8 +18,3 @@
 body {
    background-color: #121212;
 }
-
-.s {
-   background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw),
-      linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
-}
