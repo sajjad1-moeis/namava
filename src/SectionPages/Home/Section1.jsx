@@ -28,7 +28,7 @@ export default function Section1() {
    };
 
    return (
-      <div className='min-h-[65vh] md:min-h-screen'>
+      <div className='min-h-[60vh] md:min-h-screen'>
          {loding ? (
             <Loder />
          ) : (
@@ -44,9 +44,20 @@ export default function Section1() {
                {data.slice(0, 8)?.map((item) => (
                   <SwiperSlide key={item.imgLab} className='max-h-screen h-full'>
                      <>
-                        <div className='s  absolute w-full h-full opacity-50 md:opacity-100'></div>
-                        <img className='md:hidden min-h-[65vh] object-cover  w-full ' src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt='' />
-                        <img className='hidden md:block w-full h-full' src={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} alt='' />{" "}
+                        <div
+                           className='s min-h-[60vh] object-cover  w-full bg-cover'
+                           style={{
+                              backgroundPosition: "center center",
+                              backgroundImage: `
+                           
+linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 135vw), url(https://image.tmdb.org/t/p/original${item.backdrop_path})
+                           
+                           
+                           
+                           `,
+                           }}
+                           alt=''
+                        />
                      </>
                   </SwiperSlide>
                ))}

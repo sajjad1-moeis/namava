@@ -17,7 +17,7 @@ export default function Section2() {
       },
    };
    return (
-      <div className='lg:-mt-32 -mt-20'>
+      <div className='lg:-mt-32 mt-8'>
          <div>
             <Carousel navigation={true} className='px-5 lg:px-14 ' responsive={responsive}>
                {[9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9].map((item) => (
