@@ -1,0 +1,36 @@
+.boxFluidSlide .bg {
+   width: 100%;
+   position: absolute;
+   bottom: -55px;
+   opacity: 0;
+   transition: 0.5s;
+   z-index: 555555;
+   cursor: pointer;
+}
+
+.boxFluidSlide .hoverContainer {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   transition: 0.5s;
+   border-radius: 0.375rem;
+   opacity: 0;
+   z-index: 0;
+}
+
+.hoverBox:hover .hoverContainer {
+   opacity: 1;
+}
+.boxFluidSlide .bg div {
+   background-color: rgba(170, 170, 170, 1);
+   width: 60%;
+   height: 3.5px;
+   border-radius: 10px;
+   left: 60%;
+   transform: translateX(-40%);
+}
+.boxFluidSlide .active .bg {
+   opacity: 1;
+}

@@ -1,0 +1,8 @@
+header {
+   transition: 0.5s;
+   top: 0px;
+}
+.activeHeader {
+   top: -100px;
+   background-color: #121212;
+}

@@ -1,0 +1,25 @@
+@font-face {
+   font-family: iranYekan;
+   src: url(../Font/iranyekanwebmediumfanum.ttf);
+}
+@font-face {
+   font-family: iranYekanSm;
+   src: url(../Font/iranyekanwebregularfanum.ttf);
+}
+
+.yekanLg {
+   font-family: iranYekan !important;
+}
+* {
+   font-family: iranYekanSm;
+   scroll-behavior: smooth !important;
+}
+
+body {
+   background-color: #121212;
+}
+
+.s {
+   background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw),
+      linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
+}

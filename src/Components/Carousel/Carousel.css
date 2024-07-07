@@ -1,0 +1,24 @@
+.btnSlider {
+   position: absolute;
+   z-index: 50;
+   top: 0;
+   padding: 0 20px;
+   color: white;
+   height: 100%;
+   opacity: 0;
+   transition: 0.5s;
+   font-size: 25px;
+   font-weight: 900;
+   cursor: pointer;
+}
+
+.btnSlider:nth-child(2) {
+   right: 0;
+}
+.btnSlider:last-child {
+   left: 0;
+}
+
+.mySwiper:hover .btnSlider {
+   opacity: 1;
+}
