@@ -6,8 +6,8 @@ export default function LiveSlide() {
       <div className='mt-10 lg:mt-2 relative'>
          <p className='text-white mb-5 text-xl px-5 lg:px-16 '>پخش زنده</p>
          <Carousel size='lg' className=' px-5 md:px-14 swiper' navigation={true} speed={700}>
-            {[6, 6, 6, 66, 6, 6, 666, 6, 66].map((item) => (
-               <SwiperSlide className='rounded-lg overflow-hidden'>
+            {[7, 8, 6, 66, 55, 22, 666, 1, 626].map((item) => (
+               <SwiperSlide key={item} className='rounded-lg overflow-hidden'>
                   <img
                      src='https://static.namava.ir/Content/Upload/Images/c5ac3294-898b-44de-a38d-5c0c0b3f7776.jpg?anchor=middlecenter&crop=auto&scale=both&w=600&h=250'
                      alt=''

@@ -30,7 +30,7 @@ export default function Carousel(props) {
                "--swiper-navigation-color": "#fff",
                "--swiper-pagination-color": "#fff",
                "--swiper-pagination-bullet-inactive-color": "#ffda",
-               "--swiper-pagination-bottom": "10px",
+               "--swiper-pagination-bottom": "0px",
                color: "white",
             }}
             pagination={{
@@ -86,7 +86,7 @@ export default function Carousel(props) {
             className={`mySwiper ${props.className}`}
          >
             {props.children}
-            {props.customBtn || (
+            {props.custombtn || (
                <>
                   <div className='btnSlider prev  bg-gradient-to-l  from-[#121212] to-[#12121200]'>
                      <button className=' top-[40%] absolute'>
