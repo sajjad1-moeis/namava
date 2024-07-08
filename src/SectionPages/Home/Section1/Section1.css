@@ -1,0 +1,53 @@
+.s {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-position: center center;
+   background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18, 1) 150vw);
+}
+
+.descVideo {
+   position: absolute;
+   top: 20%;
+   width: 100%;
+}
+
+.sli {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+
+@media (max-width: 776px) {
+   .descVideo {
+      padding: 0 40px;
+      right: 3%;
+      top: 40%;
+   }
+   .descVideo img {
+      max-width: 60%;
+      margin: auto;
+   }
+   .sli {
+      background: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 140.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
+   }
+}
+
+@media (min-width: 776px) {
+   .descVideo {
+      right: 3%;
+   }
+   .descVideo img {
+      max-width: 18%;
+   }
+   .sli {
+      background: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 100.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
+   }
+}
+@media (min-width: 1080px) {
+   .sli {
+      background: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
+   }
+}

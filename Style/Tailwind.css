@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+   .bg-warning {
+      @apply bg-gradient-to-b from-[#ffd54c] to-[#deab00] w-max rounded-xl text-sm text-black py-1.5 px-3;
+   }
+   .flex-center {
+      @apply flex items-center gap-2;
+   }
+}

@@ -11,27 +11,10 @@
    font-family: iranYekan !important;
 }
 * {
-   font-family: iranYekanSm;
+   font-family: iranYekanSm !important;
    scroll-behavior: smooth !important;
 }
 
 body {
    background-color: #121212;
-}
-.s {
-   position: absolute;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   background-position: center center;
-}
-@media (min-width: 776px) {
-   .s {
-      background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 135vw);
-   }
-}
-@media (max-width: 776px) {
-   .s {
-      background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18, 1) 140vw);
-   }
 }

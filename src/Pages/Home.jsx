@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Components/Header/Header";
-import Section1 from "../SectionPages/Home/Section1";
+import Section1 from "../SectionPages/Home/Section1/Section1";
 import Section2 from "../SectionPages/Home/Section2";
 import SpecialCarousel from "../SectionPages/Home/SpecialCarousel";
 import LiveSlide from "../SectionPages/Home/LiveCarousel";
