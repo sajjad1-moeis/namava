@@ -73,7 +73,7 @@ export default function Section1() {
                         className=' h-full bg-cover bg-center min-h-[70vh] lg:min-h-screen'
                         style={{backgroundImage: ` url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}
                      >
-                        <div className='sli'></div>
+                        {/* <div className='sli'></div>
                         <div className='descVideo'>
                            <img src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
                            <p className='text-lg md:text-2xl mt-5 text-center md:text-right'>{item.title}</p>
@@ -99,7 +99,7 @@ export default function Section1() {
                                  توضیحات بیشتر
                               </Button>
                            </div>
-                        </div>
+                        </div> */}
                      </div>
                   </SwiperSlide>
                ))}
