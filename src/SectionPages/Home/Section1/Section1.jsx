@@ -48,14 +48,15 @@ export default function Section1() {
       <>
          <Swiper
             spaceBetween={30}
-            autoplay={{
-               delay: 2500,
-            }}
             pagination
             slidesPerView={1}
+            autoplay={{
+               delay: 2500,
+               disableOnInteraction: false,
+            }}
             breakpoints={{
                0: {
-                  initialSlide: 0,
+                  initialSlide: 5,
                   slidesPerView: 1,
                },
             }}
