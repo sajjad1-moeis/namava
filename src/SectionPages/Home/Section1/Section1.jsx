@@ -74,7 +74,7 @@ export default function Section1() {
                      >
                         <div className='sli'></div>
                         <div className='descVideo'>
-                           <img loading='lazy' src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
+                           <img src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
                            <p className='text-lg md:text-2xl mt-5 text-center md:text-right'>{item.title}</p>
 
                            <div className='md:block hidden'>
