@@ -28,8 +28,8 @@
    width: 60%;
    height: 3.5px;
    border-radius: 10px;
-   left: 60%;
-   transform: translateX(-40%);
+   left: 50%;
+   transform: translateX(-50%);
 }
 .boxFluidSlide .active .bg {
    opacity: 1;

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import "./BoxSlideFluid.css";
 import {IoHeartSharp} from "react-icons/io5";
 export default function BoxSlideFluid(props) {
@@ -17,14 +17,12 @@ export default function BoxSlideFluid(props) {
       };
    }, []);
 
-   const ClickHandeler = () => {
+   const ClickHandeler = (img) => {
       if (is && props.index2 === props.index) {
          props.setSrc("");
          setIs(false);
       } else {
-         props.setSrc(
-            "https://static.namava.ir/Content/Upload/Images/2de5505a-e548-46ca-9913-b1ba47115d6a.jpg?anchor=middlecenter&crop=auto&scale=both&w=1920&h=900"
-         );
+         props.setSrc(img);
          document.getElementById(props.idScrol).scrollIntoView();
          props.setIndex(props.index);
          setIs(true);
@@ -40,10 +38,19 @@ export default function BoxSlideFluid(props) {
                   props.setSrc("");
                   props.setIndex("");
                }}
-            ></div>
+            >
+               <div></div>
+            </div>
             <div className='relative hoverBox'>
-               <img src={props.img} className='rounded-md' onClick={size > 1080 ? ClickHandeler : undefined} />
-               <div className='hoverContainer flex h-max items-end px-5 py-5' onClick={size > 1080 ? ClickHandeler : undefined}>
+               <img
+                  src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
+                  className='rounded-md h-72'
+                  onClick={size > 1080 ? ClickHandeler : undefined}
+               />
+               <div
+                  className='hoverContainer flex  items-end px-5 py-5 h-full'
+                  onClick={() => (size > 1080 ? ClickHandeler(`https://image.tmdb.org/t/p/original${props.backdrop_path}`) : undefined)}
+               >
                   <div className=''>
                      <p>فیلم - 1399</p>
                      <div className='flex items-center my-2 gap-1'>
@@ -53,7 +60,7 @@ export default function BoxSlideFluid(props) {
                   </div>
                </div>
             </div>
-            <p className='mt-3 text-sm'>خرس</p>
+            <p className='mt-3 text-sm'>{props.title}</p>
          </div>
       </div>
    );
