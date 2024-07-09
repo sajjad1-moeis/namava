@@ -48,17 +48,20 @@ export default function Section1() {
       <>
          <Swiper
             spaceBetween={30}
-            centeredSlides={true}
             autoplay={{
                delay: 2500,
-               disableOnInteraction: false,
             }}
-            pagination={{
-               clickable: true,
+            pagination
+            slidesPerView={1}
+            breakpoints={{
+               0: {
+                  initialSlide: 0,
+                  slidesPerView: 1,
+               },
             }}
             loop
             effect='fade'
-            navigation={{prevEl: ".prev", nextEl: ".next", disabledClass: "hidden"}}
+            navigation={{prevEl: ".prev", nextEl: ".next"}}
             modules={[Autoplay, Pagination, Navigation, EffectFade]}
             className='mySwiper'
          >
