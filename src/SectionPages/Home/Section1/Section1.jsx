@@ -49,17 +49,18 @@ export default function Section1() {
          <Swiper
             allowTouchMove
             spaceBetween={30}
-            pagination={{el: ".j"}}
             slidesPerView={1}
-            initialSlide={5}
+            initialSlide={3}
             navigation={{prevEl: ".prev", nextEl: ".next"}}
+            pagination={true}
             autoplay={{
                delay: 2500,
                disableOnInteraction: false,
+               waitForTransition: true,
             }}
             breakpoints={{
                0: {
-                  initialSlide: 5,
+                  initialSlide: 3,
                   slidesPerView: 1,
                },
             }}
@@ -116,7 +117,6 @@ export default function Section1() {
                   <IoIosArrowForward />
                </button>
             </div>
-            <div className='j'></div>
          </Swiper>
       </>
    );
