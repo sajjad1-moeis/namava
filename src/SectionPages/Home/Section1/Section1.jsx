@@ -14,7 +14,7 @@ export default function Section1() {
    const [allVideo, setAllVideo] = useState([]);
    const {data, fetchData, loding} = useFetch();
    const url =
-      "https://api.themoviedb.org/3/movie/popular?api_key=c42dc63a5fb7464bc2de61817c1b0d8c&language=fa-IR&append_to_response=images,credits&include_image_language=en,fa,null";
+      "https://api.themoviedb.org/3/movie/now_playing?api_key=c42dc63a5fb7464bc2de61817c1b0d8c&language=fa-IR&append_to_response=images,credits&include_image_language=en,fa,null";
    const re = async () => {
       const moviesWithDetails = await Promise.all(
          data.map(async (movie) => {
@@ -67,13 +67,13 @@ export default function Section1() {
                   </button>
                </div>
 
-               {allVideo.slice(0, 10)?.map((item) => (
+               {allVideo.slice(2, 12)?.map((item) => (
                   <SwiperSlide key={item.id}>
                      <div
                         className=' h-full bg-cover bg-center min-h-[70vh] lg:min-h-screen'
                         style={{backgroundImage: ` url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}
                      >
-                        {/* <div className='sli'></div>
+                        <div className='sli'></div>
                         <div className='descVideo'>
                            <img src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
                            <p className='text-lg md:text-2xl mt-5 text-center md:text-right'>{item.title}</p>
@@ -99,7 +99,7 @@ export default function Section1() {
                                  توضیحات بیشتر
                               </Button>
                            </div>
-                        </div> */}
+                        </div>
                      </div>
                   </SwiperSlide>
                ))}
