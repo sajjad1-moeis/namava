@@ -49,8 +49,7 @@ export default function Section1() {
          <Swiper
             allowTouchMove
             spaceBetween={30}
-            slidesPerView={1}
-            initialSlide={3}
+            initialSlide={0}
             navigation={{prevEl: ".prev", nextEl: ".next"}}
             pagination={true}
             autoplay={{
@@ -58,16 +57,8 @@ export default function Section1() {
                disableOnInteraction: false,
                waitForTransition: true,
             }}
-            breakpoints={{
-               0: {
-                  initialSlide: 3,
-                  slidesPerView: 1,
-               },
-            }}
-            loop
             effect='fade'
             modules={[Autoplay, Pagination, Navigation, EffectFade]}
-            className='mySwiper'
          >
             {allVideo ? (
                allVideo.slice(3, 12)?.map((item) => (
