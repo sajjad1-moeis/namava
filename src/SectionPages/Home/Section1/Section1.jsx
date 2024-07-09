@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useState} from "react";
-import Carousel from "../../../Components/Carousel/Carousel";
-import {SwiperSlide} from "swiper/react";
+import {SwiperSlide, Swiper} from "swiper/react";
+
 import {IoIosArrowBack} from "react-icons/io";
 import {IoIosArrowForward} from "react-icons/io";
 import useFetch from "../../../../Hooks/useFetch";
@@ -9,6 +9,11 @@ import Loder from "../../../Components/Lodaer/Loder";
 import {Button} from "@material-tailwind/react";
 import {LuInfo} from "react-icons/lu";
 import "./Section1.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import {Autoplay, Pagination, Navigation, EffectFade} from "swiper/modules";
 
 export default function Section1() {
    const [allVideo, setAllVideo] = useState([]);
@@ -39,34 +44,26 @@ export default function Section1() {
    useEffect(() => {
       re();
    }, [data]);
-
-   const settingCarousel = {
-      loop: true,
-      slidesPerView: 1,
-      autoPlay: true,
-      delay: 2500,
-      navigation: true,
-      pagination: true,
-      fade: "true",
-      grabCursor: "true",
-   };
-
    return (
-      <div className='max-h-screen min-h-[70vh] lg:min-h-screen'>
-         {loding ? (
-            <Loder />
-         ) : (
-            <Carousel {...settingCarousel} custombtn>
-               <div className='md:block hidden  md:max-h-screen'>
-                  <button className='prev p-3.5 bg-white/25 rounded-full text-3xl absolute top-3/4 text-gray-500 transition-colors hover:text-white left-14 z-40'>
-                     <IoIosArrowBack />
-                  </button>
-                  <button className='next p-3.5 bg-white/25 rounded-full text-3xl absolute top-3/4 text-gray-500 transition-colors hover:text-white left-32 z-40'>
-                     <IoIosArrowForward />
-                  </button>
-               </div>
-
-               {allVideo.slice(3, 12)?.map((item) => (
+      <>
+         <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+               delay: 2500,
+               disableOnInteraction: false,
+            }}
+            pagination={{
+               clickable: true,
+            }}
+            loop
+            effect='fade'
+            navigation={{prevEl: ".prev", nextEl: ".next", disabledClass: "hidden"}}
+            modules={[Autoplay, Pagination, Navigation, EffectFade]}
+            className='mySwiper'
+         >
+            {allVideo ? (
+               allVideo.slice(3, 12)?.map((item) => (
                   <SwiperSlide key={item.id}>
                      <div
                         className=' h-full bg-cover bg-center min-h-[70vh] lg:min-h-screen'
@@ -101,10 +98,19 @@ export default function Section1() {
                         </div>
                      </div>
                   </SwiperSlide>
-               ))}
-               <div className='swiper-pagination md:hidden'></div>
-            </Carousel>
-         )}
-      </div>
+               ))
+            ) : (
+               <Loder />
+            )}
+            <div className='md:block hidden  md:max-h-screen'>
+               <button className='prev p-3.5 bg-white/25 rounded-full text-3xl absolute top-3/4 text-gray-500 transition-colors hover:text-white left-14 z-40'>
+                  <IoIosArrowBack />
+               </button>
+               <button className='next p-3.5 bg-white/25 rounded-full text-3xl absolute top-3/4 text-gray-500 transition-colors hover:text-white left-32 z-40'>
+                  <IoIosArrowForward />
+               </button>
+            </div>
+         </Swiper>
+      </>
    );
 }

@@ -40,9 +40,7 @@ export default function BoxSlideFluid(props) {
                   props.setSrc("");
                   props.setIndex("");
                }}
-            >
-               <div></div>
-            </div>
+            ></div>
             <div className='relative hoverBox'>
                <img src={props.img} className='rounded-md' onClick={size > 1080 ? ClickHandeler : undefined} />
                <div className='hoverContainer flex h-max items-end px-5 py-5' onClick={size > 1080 ? ClickHandeler : undefined}>
