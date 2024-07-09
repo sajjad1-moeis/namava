@@ -47,6 +47,7 @@ export default function Section1() {
    return (
       <>
          <Swiper
+            allowTouchMove
             spaceBetween={30}
             pagination
             slidesPerView={1}
