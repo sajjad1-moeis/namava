@@ -50,6 +50,7 @@ export default function Section1() {
             spaceBetween={30}
             pagination
             slidesPerView={1}
+            initialSlide={5}
             autoplay={{
                delay: 2500,
                disableOnInteraction: false,
