@@ -44,11 +44,10 @@ export default function Section1() {
       loop: true,
       slidesPerView: 1,
       autoPlay: true,
-      delay: 3000,
+      delay: 2500,
       navigation: true,
       pagination: true,
       fade: "true",
-      speed: 450,
       grabCursor: "true",
    };
 
@@ -75,7 +74,7 @@ export default function Section1() {
                      >
                         <div className='sli'></div>
                         <div className='descVideo'>
-                           <img src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
+                           <img loading='lazy' src={`https://image.tmdb.org/t/p/original${item.logoUrl}`} alt='' />
                            <p className='text-lg md:text-2xl mt-5 text-center md:text-right'>{item.title}</p>
 
                            <div className='md:block hidden'>
