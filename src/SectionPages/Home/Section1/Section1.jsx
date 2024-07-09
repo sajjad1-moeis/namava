@@ -66,7 +66,7 @@ export default function Section1() {
                   </button>
                </div>
 
-               {allVideo.slice(2, 12)?.map((item) => (
+               {allVideo.slice(3, 12)?.map((item) => (
                   <SwiperSlide key={item.id}>
                      <div
                         className=' h-full bg-cover bg-center min-h-[70vh] lg:min-h-screen'
