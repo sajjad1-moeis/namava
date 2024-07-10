@@ -70,7 +70,7 @@ export default function Section1() {
                   </button>
                </div>
 
-               {allVideo.slice(4)?.map((item) => (
+               {allVideo.slice(4, -1)?.map((item) => (
                   <SwiperSlide key={item.id}>
                      <div
                         className=' h-full bg-cover bg-center min-h-[70vh] lg:min-h-screen'

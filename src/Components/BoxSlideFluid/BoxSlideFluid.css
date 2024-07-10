@@ -1,7 +1,7 @@
 .boxFluidSlide .bg {
    width: 100%;
    position: absolute;
-   bottom: -55px;
+   bottom: -20px;
    opacity: 0;
    transition: 0.5s;
    z-index: 555555;
@@ -29,7 +29,7 @@
    height: 3.5px;
    border-radius: 10px;
    left: 50%;
-   transform: translateX(-50%);
+   transform: translateX(-40%);
 }
 .boxFluidSlide .active .bg {
    opacity: 1;

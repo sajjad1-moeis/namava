@@ -30,8 +30,8 @@ export default function BoxSlideFluid(props) {
    };
 
    return (
-      <div className='boxFluidSlide relative cursor-pointer'>
-         <div className={`rounded  ${props.className}`}>
+      <div className={`boxFluidSlide relative cursor-pointer  `}>
+         <div className={`rounded  ${props.className} pb-10`}>
             <div
                className='p-5 bg'
                onClick={() => {
@@ -44,8 +44,8 @@ export default function BoxSlideFluid(props) {
             <div className='relative hoverBox'>
                <img
                   src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
-                  className='rounded-md h-72'
-                  onClick={size > 1080 ? ClickHandeler : undefined}
+                  className='rounded-md md:h-72'
+                  onClick={() => (size > 1080 ? ClickHandeler(`https://image.tmdb.org/t/p/original${props.backdrop_path}`) : undefined)}
                />
                <div
                   className='hoverContainer flex  items-end px-5 py-5 h-full'
