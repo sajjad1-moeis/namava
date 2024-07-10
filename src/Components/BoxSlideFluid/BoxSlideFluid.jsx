@@ -45,6 +45,7 @@ export default function BoxSlideFluid(props) {
                <img
                   src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
                   className='rounded-md md:h-72'
+                  loading='lazy'
                   onClick={() => (size > 1080 ? ClickHandeler(`https://image.tmdb.org/t/p/original${props.backdrop_path}`) : undefined)}
                />
                <div
