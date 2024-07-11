@@ -118,7 +118,7 @@ export default function Carousel(props) {
             style={{transition: "0.5s", height: props.src ? `866px` : "0px", maxHeight: "866px"}}
             className='overflow-hidden w-full h-full mt-10 lg:block hidden relative'
          >
-            {<img src={props.src} ref={reImg} className={`${loadImg ? "opacity-0" : "opacity-100"}`} alt='' />}
+            {<img src={props.src} ref={reImg} className={`w-full ${loadImg ? "opacity-0" : "opacity-100"}`} alt='' loading='lazy' />}
 
             {loadImg && <Loder />}
          </div>

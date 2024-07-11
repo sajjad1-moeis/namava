@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
 import CarouselFluid from "../../Components/Carousel/CarouselFluid";
+import useFetch from "../../../Hooks/useFetch";
 
 export default function NewNamava() {
+   const {data, fetchData, loding} = useFetch();
+
+   const url = "https://api.themoviedb.org/3/movie/now_playing?language=fa-IR&page=3";
+
+   useEffect(() => {
+      fetchData(url);
+   }, []);
+
    return (
       <div>
-         <CarouselFluid
-            img='https://static.namava.ir/Content/Upload/Images/708d907b-b91a-4555-b74b-9ff5a38f52c2.jpg?anchor=middlecenter&crop=auto&scale=both&w=200&h=294'
-            arr={[2, 3, 4, 4, 4, 5, 5, 6, 6, 778, 8, 8]}
-            title='تازه های نماوا'
-            id='imgSlide7'
-         />
+         <CarouselFluid arr={data} title='تازه های نماوا' id='imgSlide7' />
       </div>
    );
 }

@@ -4,9 +4,8 @@ import CarouselFluid from "../../Components/Carousel/CarouselFluid";
 import useFetch from "../../../Hooks/useFetch";
 
 export default function FreeCarousel() {
-   const {data, fetchData, loding} = useFetch();
-
    const url = "https://api.themoviedb.org/3/movie/now_playing?language=fa-IR&page=2";
+   const {data, fetchData, loding} = useFetch();
 
    useEffect(() => {
       fetchData(url);

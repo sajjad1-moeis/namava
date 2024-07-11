@@ -61,7 +61,7 @@ export default function BoxSlideFluid(props) {
                   </div>
                </div>
             </div>
-            <p className='mt-3 text-sm'>{props.title}</p>
+            <p className='mt-3 text-sm'>{props.title || props.name}</p>
          </div>
       </div>
    );
